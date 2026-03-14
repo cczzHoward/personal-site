@@ -15,7 +15,7 @@ export function getPosts(): PostMeta[] {
       return {
         slug,
         title: data.title as string,
-        date: data.date as string,
+        date: String(data.date),
       }
     })
     .sort((a, b) => (a.date > b.date ? -1 : 1))
@@ -29,7 +29,7 @@ export function getPostContent(slug: string): { title: string; date: string; con
   const { data, content } = matter(entry[1])
   return {
     title: data.title as string,
-    date: data.date as string,
+    date: String(data.date),
     content,
   }
 }
