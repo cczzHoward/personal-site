@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function Placeholder({ name }: { name: string }) {
-  return <div style={{ color: '#e8e8f0', padding: '2rem' }}>{name}</div>
+  return <div className="text-[--color-text] p-8">{name}</div>
 }
 
 function App() {
