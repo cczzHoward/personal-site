@@ -21,8 +21,10 @@ export default function Landing() {
     if (!isDeleting && displayed === current) {
       timeout = setTimeout(() => setIsDeleting(true), PAUSE_MS)
     } else if (isDeleting && displayed === '') {
-      setIsDeleting(false)
-      setPhraseIndex((i) => (i + 1) % PHRASES.length)
+      timeout = setTimeout(() => {
+        setIsDeleting(false)
+        setPhraseIndex((i) => (i + 1) % PHRASES.length)
+      }, 0)
     } else {
       const next = isDeleting
         ? current.slice(0, displayed.length - 1)
