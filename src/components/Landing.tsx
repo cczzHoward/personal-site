@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Button } from 'antd'
 import { GithubOutlined } from '@ant-design/icons'
 
-const PHRASES = ['前端工程師', '學習筆記愛好者', 'Lifelong Learner']
+const PHRASES = ['軟體工程師', '學習筆記愛好者', 'Lifelong Learner']
 const TYPE_SPEED = 80
 const DELETE_SPEED = 40
 const PAUSE_MS = 1800
