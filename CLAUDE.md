@@ -20,6 +20,12 @@
 - 禁止使用 `var`，使用 `const` / `let`
 - 避免使用已 deprecated 的語法與 API
 
+## Commit 規範
+
+- 每完成一個有意義的段落（功能、設定、修復）就 commit 一次，不要累積太多改動才 commit
+- 每次 commit 前，必須向使用者清楚說明這次改動的內容（改了什麼、為什麼），確認後才執行 commit
+- Commit message 使用英文，格式：`type: description`（例如 `feat: add navbar component`）
+
 ## 常用指令
 
 - `npm run dev` — 啟動開發伺服器
