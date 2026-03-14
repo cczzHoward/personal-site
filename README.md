@@ -1,73 +1,43 @@
-# React + TypeScript + Vite
+# Howard Cheng — Personal Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+個人網站，包含自我介紹與學習筆記部落格。
 
-Currently, two official plugins are available:
+## 技術棧
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 + Vite 8 + TypeScript 5
+- TailwindCSS — 排版、間距、顏色
+- Ant Design — UI 元件
+- react-router-dom — 路由
+- react-markdown — Markdown 渲染
 
-## React Compiler
+## 路由
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| 路徑 | 說明 |
+|------|------|
+| `/` | Landing Page（打字機動畫） |
+| `/home` | 主頁（About / Skills / Contact） |
+| `/blog` | 文章列表 |
+| `/blog/:slug` | 單篇文章 |
 
-## Expanding the ESLint configuration
+## 常用指令
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev      # 啟動開發伺服器
+npm run build    # 打包
+npm run lint     # ESLint 檢查
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 新增文章
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+在 `src/posts/` 新增 `.md` 檔案，格式如下：
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```markdown
+---
+title: 文章標題
+date: 2026-03-14
+---
+
+文章內容
 ```
+
+檔名即為文章的 slug（例如 `my-post.md` → `/blog/my-post`）。
