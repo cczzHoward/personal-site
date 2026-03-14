@@ -1,18 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Landing from './components/Landing'
 import Home from './components/Home'
-
-function Placeholder({ name }: { name: string }) {
-  return <div className="text-[--color-text] p-8">{name}</div>
-}
+import PostList from './components/blog/PostList'
+import PostDetail from './components/blog/PostDetail'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Placeholder name="Landing" />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/blog" element={<Placeholder name="PostList" />} />
-        <Route path="/blog/:slug" element={<Placeholder name="PostDetail" />} />
+        <Route path="/blog" element={<PostList />} />
+        <Route path="/blog/:slug" element={<PostDetail />} />
       </Routes>
     </BrowserRouter>
   )
