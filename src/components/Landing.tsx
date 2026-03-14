@@ -73,6 +73,7 @@ export default function Landing() {
           href="https://github.com/cczzhoward"
           target="_blank"
           rel="noreferrer"
+          aria-label="GitHub Profile"
           className="text-[--color-text-muted] hover:text-[--color-text] transition-colors"
           style={{ fontSize: '1.75rem' }}
         >
@@ -88,12 +89,6 @@ export default function Landing() {
         </Button>
       </div>
 
-      <style>{`
-        @keyframes blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-        }
-      `}</style>
     </div>
   )
 }
