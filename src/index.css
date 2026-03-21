@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --color-bg: #F5F0EB;
+  --color-bg: #f5f0eb;
   --color-primary: #754043;
   --color-text: #171614;
-  --color-text-muted: #9A8873;
-  --color-card: #EDE6DD;
-  --color-secondary: #37423D;
-  --color-tag-text: #3A2618;
+  --color-text-muted: #9a8873;
+  --color-card: #ede6dd;
+  --color-secondary: #37423d;   /* inactive nav links */
+  --color-tag-text: #3a2618;    /* skill tag text */
 }
 
 * {
