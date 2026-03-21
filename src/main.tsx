@@ -6,7 +6,7 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ConfigProvider theme={{ token: { colorPrimary: '#6c63ff' } }}>
+    <ConfigProvider theme={{ token: { colorPrimary: '#754043' } }}>
       <App />
     </ConfigProvider>
   </StrictMode>,
