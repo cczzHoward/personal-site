@@ -47,6 +47,7 @@ export default function Landing() {
         style={{
           fontSize: 'clamp(2.5rem, 8vw, 5rem)',
           color: 'var(--color-primary)',
+          fontFamily: "'Libre Baskerville', serif",
         }}
       >
         Howard Cheng
