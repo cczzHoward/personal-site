@@ -26,7 +26,7 @@ export default function PostList() {
                 className="rounded-lg p-5"
                 style={{
                   backgroundColor: 'var(--color-card)',
-                  border: '1px solid rgba(108, 99, 255, 0.15)',
+                  border: '1px solid rgba(117, 64, 67, 0.15)',
                 }}
               >
                 <Link to={`/blog/${post.slug}`} className="no-underline">

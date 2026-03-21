@@ -23,8 +23,8 @@ export default function Skills() {
               padding: '4px 14px',
               borderRadius: '999px',
               backgroundColor: 'var(--color-card)',
-              border: '1px solid rgba(108, 99, 255, 0.3)',
-              color: 'var(--color-text)',
+              border: '1px solid rgba(117, 64, 67, 0.3)',
+              color: 'var(--color-tag-text)',
             }}
           >
             {skill}
