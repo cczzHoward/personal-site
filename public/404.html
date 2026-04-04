@@ -7,7 +7,7 @@
       // SPA redirect trick for GitHub Pages
       // Encodes the path into a query string and redirects to index.html
       // pathSegmentsToKeep = 1 keeps the /personal-site/ repo prefix
-      var pathSegmentsToKeep = 1;
+      var pathSegmentsToKeep = 0;
       var l = window.location;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
